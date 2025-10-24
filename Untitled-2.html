@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Nalunk Praditaa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd6e8, #fcdde2, #ffe6f2);
+      color: #333;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 250px;
+      background: #ffb6c1;
+      background: linear-gradient(180deg, #fcb6d1, #fddde6);
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .nav {
+      list-style: none;
+      width: 100%;
+    }
+
+    .nav li {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .nav a {
+      display: block;
+      width: 100%;
+      padding: 10px 15px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .nav a:hover, .nav a.active {
+      background: #fff;
+      color: #ff6f91;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      flex: 1;
+      padding: 50px;
+      overflow-y: auto;
+      animation: fadeIn 0.5s ease;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #ff6f91;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-top: 20px;
+    }
+
+    .skills-list, .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill, .cert {
+      background: #ffe0eb;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .contact p {
+      margin: 5px 0;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="img/img nalunk.jpeg" alt="Foto Nalunk">
+    <h2>Nalunk Praditaa</h2>
+    <ul class="nav">
+      <li><a href="#" class="active" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('about')">About Me</a></li>
+      <li><a href="#" onclick="showSection('experience')">Experience</a></li>
+      <li><a href="#" onclick="showSection('skills')">Skill</a></li>
+      <li><a href="#" onclick="showSection('certificate')">Certificate</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <section id="home" class="active">
+      <h1>HALOOO!!!!!</h1>
+      <p>Aku <strong>Nalunk Praditaa</strong> siswa dari SMKN Ngleokok jurusan Teknik Komputer dan Jaringan (TKJ).  
+      Kenalan sama aku yukkkk!</p>
+    </section>
+
+    <section id="about">
+      <h1>About Me</h1>
+      <div class="info">
+        <p><b>Nama Lengkap:</b> Nalunk Praditaa</p>
+        <p><b>Tempat, Tanggal Lahir:</b> Blitar, 13 Desember 2008</p>
+        <p><b>Jenis Kelamin:</b> Perempuan</p>
+        <p><b>Agama:</b> Islam</p>
+        <p><b>Alamat:</b> Blitar, Sumberasri, RT 2/RW 10</p>
+        <p><b>Asal Sekolah:</b> SMK Negeri 1 Ngleokok</p>
+        <p><b>Jurusan:</b> Teknik Komputer dan Jaringan (TKJ)</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h1>Experience</h1>
+      <div class="info">
+        <p>Selama di SMKN Nglegok, aku telah belajar banyak hal seperti:</p>
+        <ul>
+          <li>Menginstal sistem operasi Debian dan Windows</li>
+          <li>Mengonfigurasi Mikrotik dan membuat jaringan WiFi</li>
+          <li>Mengerjakan krimping kabel jaringan</li>
+          <li>Belajar dasar Cisco Networking</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h1>Skill</h1>
+      <div class="info skills-list">
+        <div class="skill">Instalasi OS (Debian & Windows)</div>
+        <div class="skill">Mikrotik Configuration</div>
+        <div class="skill">Cisco Basic Network</div>
+        <div class="skill">Crimping Kabel LAN</div>
+        <div class="skill">WiFi Setup</div>
+        <div class="skill">coding</div>
+      </div>
+    </section>
+
+    <section id="certificate">
+      <h1>Certificate</h1>
+      <div class="info cert-list">
+        <div class="cert">AGUNGA Network Certificate</div>
+        <div class="cert">FORTINET Training Certificate</div>
+        <div class="cert">Mikrotik Basic Configuration</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <div class="info contact">
+        <p><b>No. HP:</b> 085791204159</p>
+        <p><b>Email:</b> nalunkpraditaa8@gmail.com</p>
+        <p><b>Instagram:</b> @nalunkpraditaa</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll('.nav a');
+    const sections = document.querySelectorAll('section');
+
+    function showSection(id) {
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      links.forEach(link => link.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
